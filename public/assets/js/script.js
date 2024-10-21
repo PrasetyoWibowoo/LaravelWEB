@@ -1,4 +1,4 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById('loginForm').addEventListener("submit", function(event) {
     event.preventDefault();
 
     const correctUsername = 'tyoo';
@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (username === correctUsername && password === correctPassword) {
         alert("login berhasil");
-        window.location.href = 'welcome';
+        window.location.href = '/index'; 
     } else {
         alert("username atau password tidak sesuai");
     }

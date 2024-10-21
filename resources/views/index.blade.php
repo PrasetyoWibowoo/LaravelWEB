@@ -1,227 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Saya</title>
-    <link rel="stylesheet" href="assets\css\style.css" />
-    <link rel="stylesheet" href="assets\css\mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Prasetyo Wibowo</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Prasetyo Wibowo</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="assets\img\profile-pic.png" alt="Tyo profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Prasetyo Wibowo</h1>
-        <p class="section__text__p2">Web Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download Introduct
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="assets\img\about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="assets\img\experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2 years <br />Web Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="assets\img\education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>SMK Telkom Purwokerto<br />SMP Telkom Purwokerto</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Sebagai seorang junior programmer,
-              Saya berada pada tahap awal karier
-               di dunia pemrograman. Sebagai seorang
-               Web Devloper saya akan mempelajari 
-               dan memahami tentang Pemahaman code,
-               Pemecahan masalah, Pemahaman proses 
-               pengembangan perangkat lunak, pengembangan portofolio.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets\img\arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Web Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets\img\checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Basic</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    @vite('resources/css/app.css')
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header class="bg-gray-800 p-6">
+        <h1 class="text-3xl text-center">My Portfolio</h1>
+    </header>
+
+    <main class="p-6">
+        <section class="mb-12">
+            <h2 class="text-2xl mb-4">About Me</h2>
+            <p class="text-gray-400">Hello! I'm a web developer with a passion for creating beautiful and functional websites. I love coding and I'm always eager to learn new technologies.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl">Project 1</h3>
+                    <p class="text-gray-400">Description of project 1. This project involves...</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets\img\checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Basic</p>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl">Project 2</h3>
+                    <p class="text-gray-400">Description of project 2. This project involves...</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets\img\checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ConsoleApp</h3>
-                  <p>Experienced</p>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl">Project 3</h3>
+                    <p class="text-gray-400">Description of project 3. This project involves...</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl">Project 4</h3>
+                    <p class="text-gray-400">Description of project 4. This project involves...</p>
                 </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets\img\arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets\img\project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://drive.google.com/drive/folders/1nXio5ylw5q0jBrm4XT9iSokwTiHTprKh?usp=sharing'"
-              >
-                Project ConsoleApp
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets\img\arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="assets\img\email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="541231171@student.smktelkom-pwt.sch.id">541231171@student.smktelkom-pwt.sch.id</a></p>
-        </div>
-        <div class="contact-info-container">
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <footer>website and its content is copyright of Prasetyo Wibowo - © Copyright 2023</footer>
+        </section>
+
+        <section>
+            <h2 class="text-2xl mb-4">Contact Me</h2>
+            <form action="#" method="POST" class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label class="block text-gray-400 mb-2" for="name">Name:</label>
+                    <input class="w-full p-2 rounded" type="text" id="name" name="name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-400 mb-2" for="email">Email:</label>
+                    <input class="w-full p-2 rounded" type="email" id="email" name="email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-400 mb-2" for="message">Message:</label>
+                    <textarea class="w-full p-2 rounded" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 py-2 px-4 rounded" type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 p-6 text-center">
+        <p class="text-gray-400">© 2023 My Portfolio. All rights reserved.</p>
     </footer>
-  </body>
+</body>
 </html>
