@@ -8,8 +8,10 @@
 </head>
 <body class="bg-gray-900 text-white">
 
-    <header class="bg-gray-800 p-6">
-        <h1 class="text-3xl text-center">My Portfolio</h1>
+    <header class="bg-gray-800 p-6 text-center">
+        <h1 class="text-3xl">My Portfolio</h1>
+        <a href="{{ route('about') }}" class="text-1xl text-white hover:text-gray-300 m-0,5 p-1">About</a>
+        <a href="{{ route('login') }}" class="text-1xl text-white hover:text-gray-300 m-0,5 p-1">Login</a>
     </header>
 
     <main class="p-6">
@@ -42,18 +44,18 @@
 
         <section>
             <h2 class="text-2xl mb-4">Contact Me</h2>
-            <form action="#" method="POST" class="bg-gray-800 p-4 rounded-lg shadow-lg">
+            <form action="/login" method="POST" class="bg-gray-800 p-4 rounded-lg shadow-lg">
                 <div class="mb-4">
                     <label class="block text-gray-400 mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 rounded" type="text" id="name" name="name" required>
+                    <input class="bg-gray-500 w-full p-2 rounded" type="text" id="name" name="name" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-400 mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 rounded" type="email" id="email" name="email" required>
+                    <input class="bg-gray-500 w-full p-2 rounded" type="email" id="email" name="email" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-400 mb-2" for="message">Message:</label>
-                    <textarea class="w-full p-2 rounded" id="message" name="message" rows="4" required></textarea>
+                    <textarea class="bg-gray-500 w-full p-2 rounded" id="message" name="message" rows="4" required></textarea>
                 </div>
                 <div class="text-center">
                     <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 py-2 px-4 rounded" type="submit">Send Message</button>
