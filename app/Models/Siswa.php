@@ -13,11 +13,12 @@ class Siswa extends Model
     protected $fillable = [
         'nama',
         'nis',
+        'projek_id',
     ];
 
     public function projek(): BelongsTo
     {
-        return $this->belongsTo(projek::class, 'projek_id');
+        return $this->belongsTo(Projek::class, 'projek_id');
 
     }
 }

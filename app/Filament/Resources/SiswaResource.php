@@ -35,11 +35,14 @@ class SiswaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama'),
-                Tables\Columns\TextColumn::make('nis'),
+                Tables\Columns\TextColumn::make('nis')->sortable(),
+                Tables\Columns\TextColumn::make('nama')
+                ->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('projek.nama_projek')->searchable()->sortable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('projek_id')
+                ->relationship('projek', 'nama_projek'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
